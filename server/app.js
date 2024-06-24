@@ -17,7 +17,7 @@ app.get('/',(req,res)=>{
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.CORS_ORIGIN, // Ensure CORS_ORIGIN is correctly set in your .env file
+  origin: 'http://localhost:5173/', // Ensure CORS_ORIGIN is correctly set in your .env file
   credentials: true, // Enable credentials (cookies, authorization headers) to be included in CORS requests
 }));
 
