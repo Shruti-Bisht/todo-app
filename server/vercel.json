@@ -1,4 +1,5 @@
-{
+  
+  {
     "version": 2,
     "builds": [
       {
@@ -8,12 +9,17 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
-          "headers": {
-        "Access-Control-Allow-Origin": "http://localhost:5173",
-        "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        "src": "/api/v1/(.*)",
+        "headers": {
+          "Access-Control-Allow-Origin": "http://localhost:5173",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, DELETE",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+          "Access-Control-Allow-Credentials": "true"
+        },
+        "dest": "/api/v1/$1"
       },
+      {
+        "src": "/(.*)",
         "dest": "./index.js"
       }
     ]
