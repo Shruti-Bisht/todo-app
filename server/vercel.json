@@ -9,7 +9,10 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "./index.js","headers": [
+        "dest": "./index.js"
+      }
+    ]
+     "headers": [
     {
       "source": "/api/v1/(.*)",
       "headers": [
@@ -20,8 +23,5 @@
       ]
     }
   ]
-          
-      }
-    ]
   }
   
