@@ -1,0 +1,241 @@
+:root {
+    --primary-color: rgb(101, 101, 214);
+    --secondary-color: white;
+    --tertiary-color: rgb(50, 50, 87);
+    --background-color: rgb(21, 21, 40);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px 40px
+}
+
+.todoForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.todoForm>div {
+    /* border: 2px solid red; */
+    background-color: var(--tertiary-color);
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+.formItem {
+    font-size: 1.2rem;
+    margin: 10px;
+    width: 100%;
+}
+
+.formItem span {
+    display: inline-block;
+    width: 230px;
+    text-align: right;
+}
+
+.formItem input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 200px;
+    margin-left: 5px;
+}
+
+button {
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+button:hover {
+    background-color: var(--background-color)
+}
+
+#button {
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 8px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.navigateButton {
+    margin: auto;
+    width: max-content;
+    padding: 5px 10px;
+}
+
+.navigateButton a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.navigateButton a:hover {
+
+    text-decoration: underline;
+    color: var(--background-color)
+}
+
+/* task management */
+
+.taskForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.taskForm div,
+.taskForm input,
+.taskForm textarea {
+    width: 65%;
+    margin: auto;
+    text-align: right;
+
+}
+
+@media screen and (max-width:750px) {
+    .formItem span {
+        text-align: left;
+        margin: 5px 0px;
+    }
+
+    .formItem input {
+        margin-left: 0px;
+        width: 90%;
+    }
+
+    .taskForm div,
+    .taskForm input,
+    .taskForm textarea {
+        width: 100%;
+        margin: auto;
+        text-align: left;
+
+    }
+}
+
+.heading {
+    margin: 50px 0px;
+}
+
+.taskForm input,
+.taskForm textarea {
+    padding: 10px;
+}
+
+.taskForm input::placeholder,
+.taskForm textarea,
+.taskForm input[type="date"] {
+    text-align: left;
+}
+
+.logoutBtn {
+    width: 100%;
+}
+
+.logoutBtn button {
+    padding: 7px 20px;
+    border-radius: 10px;
+    width: 100px;
+    float: inline-end;
+    margin: 0px 0px 40px 0px;
+}
+
+.taskCreateButton {
+    width: 30%;
+    margin: auto;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+
+
+.task {
+    /* border: 2px solid black; */
+    padding: 20px 10px;
+    background-color: var(--tertiary-color);
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:750px) {
+    .taskCreateButton {
+        width: 100%;
+    }
+
+    .task {
+        width: 100%;
+    }
+}
+.task p{
+    font-weight: bold;
+}
+.task span {
+    font-size: 14px;
+    opacity: 80%;
+}
+
+.task h3,
+.task p {
+    margin: 8px 0px;
+}
+
+.task button {
+    padding: 8px 20px;
+    margin: 0px 10px;
+    border-radius: 8px;
+}
+
+.disabled {
+    opacity: 30%;
+}
+
+.disabled button:hover {
+    background-color:red;
+}
+.disabled button{
+    background-color: red;
+}
+.ReactModal__Overlay {
+    background-color: var(--background-color) !important;
+    opacity: 95%;
+}
+
+.ReactModal__Content {
+    background-color: var(--background-color) !important;
+    opacity: 95%;
+}
+
+.UpdateModal input{
+
+   padding: 8px;
+   border-radius: 8px;
+   width: 92%;
+   margin: 10px;
+}
+.cursorDisable{
+    cursor: not-allowed;
+}
