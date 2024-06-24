@@ -1,5 +1,5 @@
 // export const  hostname="http://localhost:3000/api/v1"
-export const  hostname="https://todo-app-lake-two-63.vercel.app/api/v1"
+export const  hostname="https://todo-qobfrqspq-shrutis-projects-7236cf6e.vercel.app/api/v1"
 
 export const authRegister=`${hostname}/auth/register`;
 export const authLogin=`${hostname}/auth/login`
