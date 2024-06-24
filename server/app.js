@@ -16,7 +16,10 @@ app.get('/',(req,res)=>{
 
 
 // CORS configuration
-app.use(cors());
+app.use(cors({
+  origin: process.env.CORS_ORIGIN, // Ensure CORS_ORIGIN is correctly set in your .env file
+  credentials: true, // Enable credentials (cookies, authorization headers) to be included in CORS requests
+}));
 
 // JSON parsing middleware
 app.use(express.json());
