@@ -56,8 +56,7 @@ function Task() {
         });
         // console.log(res.data.success)
         if (res.data.success) {
-          // window.location.reload();
-          navigate('/taskManagement');
+          window.location.reload();
         }
       } catch (err) {
         toast.error(err.message, toastOptions);
